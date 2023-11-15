@@ -1,0 +1,41 @@
+edition: 3.0.0
+name: puppeteer-app
+access: '{{ access }}'
+vars:
+  region: '{{ region }}'
+
+resources:
+  puppeteer:
+    component: fc3
+    props:
+      region: ${vars.region}
+      functionName: '{{ functionName }}'
+      code: ./code
+      handler: index.handler
+      timeout: 120
+      memorySize: 1536
+      runtime: nodejs16
+      layers:
+        - acs:fc:${vars.region}:official:layers/Nodejs-Puppeteer17x/versions/3
+      environmentVariables:
+        LD_LIBRARY_PATH: /opt/lib/x86_64-linux-gnu:/opt/lib
+        NODE_PATH: /opt/node_modules:/opt/nodejs/node_modules
+      triggers:
+        - triggerName: httpTrigger
+          triggerType: http
+          triggerConfig:
+            authType: anonymous
+            methods:
+              - GET
+              - POST
+              - PUT
+  fc3_domain_0:
+    component: fc3-domain
+    props:
+      region:  ${vars.region}
+      domainName: auto
+      protocol: HTTP
+      routeConfig:
+        routes:
+          - path: /*
+            functionName: '{{ functionName }}'
