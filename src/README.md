@@ -1,5 +1,5 @@
 
-> 注：当前项目为 Serverless Devs 应用，由于应用中会存在需要初始化才可运行的变量（例如应用部署地区、函数名等等），所以**不推荐**直接 Clone 本仓库到本地进行部署或直接复制 s.yaml 使用，**强烈推荐**通过 `s init --project ${模版名称}` 的方法或应用中心进行初始化，详情可参考[部署 & 体验](#部署--体验) 。
+> 注：当前项目为 Serverless Devs 应用，由于应用中会存在需要初始化才可运行的变量（例如应用部署地区、函数名等等），所以**不推荐**直接 Clone 本仓库到本地进行部署或直接复制 s.yaml 使用，**强烈推荐**通过 `s init ${模版名称}` 的方法或应用中心进行初始化，详情可参考[部署 & 体验](#部署--体验) 。
 
 # start-puppeteer-v3 帮助文档
 <p align="center" class="flex justify-center">
@@ -16,7 +16,7 @@
 
 <description>
 
-基于 Nodejs 运行时的 puppeteer 的截图 Web 应用
+本案例将 Puppeteer ，这一使用者广泛的基于 nodejs 的截图 web 应用，快速创建并部署到阿里云函数计算 FC 。
 
 </description>
 
@@ -34,28 +34,17 @@
 
 ## 前期准备
 
-使用该项目，您需要有开通以下服务：
+使用该项目，您需要有开通以下服务并拥有对应权限：
 
 <service>
 
 
 
-| 服务 |  备注  |
-| --- |  --- |
-| 函数计算 FC |  puppeteer 的截图函数需要部署到函数计算 |
+| 服务/业务 |  权限  | 相关文档 |
+| --- |  --- | --- |
+| 函数计算 |  AliyunFCFullAccess | [帮助文档](https://help.aliyun.com/product/2508973.html) [计费文档](https://help.aliyun.com/document_detail/2512928.html) |
 
 </service>
-
-推荐您拥有以下的产品权限 / 策略：
-<auth>
-
-
-
-| 服务/业务 |  权限 |  备注  |
-| --- |  --- |   --- |
-| 函数计算 | AliyunFCFullAccess |  puppeteer 的截图函数需要部署到函数计算 |
-
-</auth>
 
 <remark>
 
@@ -81,14 +70,16 @@
     
 - 通过 [Serverless Devs Cli](https://www.serverless-devs.com/serverless-devs/install) 进行部署：
   - [安装 Serverless Devs Cli 开发者工具](https://www.serverless-devs.com/serverless-devs/install) ，并进行[授权信息配置](https://docs.serverless-devs.com/fc/config) ；
-  - 初始化项目：`s init --project start-puppeteer-v3 -d start-puppeteer-v3`
+  - 初始化项目：`s init start-puppeteer-v3 -d start-puppeteer-v3`
   - 进入项目，并进行项目部署：`cd start-puppeteer-v3 && s deploy -y`
    
 </deploy>
 
-## 应用详情
+## 案例介绍
 
 <appdetail id="flushContent">
+
+本案例将 Puppeteer ，这一使用者广泛的、基于 nodejs 运行时的截图 web 应用，快速创建并部署到阿里云函数计算 FC 。
 
 Puppeteer 是一个 Node 库，它提供了高级的 API 并通过 DevTools 协议来控制 Chrome(或Chromium)。通俗来说就是一个 headless chrome 浏览器 (也可以配置成有 UI 的，默认是没有的), 可以完成很多自动化的事情， 比如：
 
@@ -104,9 +95,15 @@ Puppeteer 是一个 Node 库，它提供了高级的 API 并通过 DevTools 协�
 
 - ...
 
-本应用是将 Puppeteer 生成网页截图的示例部署到阿里云函数计算（FC)。
+通过 Serverless 开发平台，您只需要几步，就可以体验  Puppeteer ，并享受 Serverless 架构带来的降本提效的技术红利。
 
-通过 Serverless Devs 开发者工具，您只需要几步，就可以体验 Serverless 架构，带来的降本提效的技术红利。
+</appdetail>
+
+## 使用流程
+
+<usedetail id="flushContent">
+
+### 查看部署的案例
 
 部署完成之后，您可以看到系统返回给您的案例地址，例如：
 
@@ -116,12 +113,23 @@ Puppeteer 是一个 Node 库，它提供了高级的 API 并通过 DevTools 协�
 
 ![图片alt](https://img.alicdn.com/imgextra/i2/O1CN01DK9mJH1wxLHCDXO5e_!!6000000006374-0-tps-1200-5998.jpg)
 
-</appdetail>
+也可以通过 url 渲染其他页面，在浏览器添加query参数 如：
+![](https://img.alicdn.com/imgextra/i4/O1CN01bp2vHZ1Ot2oIRscdI_!!6000000001762-0-tps-1112-84.jpg)
 
-## 使用文档
+就可以得到阿里云函数计算帮助中心首页的截图：
 
-<usedetail id="flushContent">
+![](https://img.alicdn.com/imgextra/i3/O1CN01y7CkAn1gvU0GbE5s9_!!6000000004204-0-tps-2578-1554.jpg)
+
+### 二次开发
+
+您可以通过云端控制台的开发功能进行二次开发。如果您之前是在本地创建的项目案例，也可以在本地项目目录`start-puppeteer-v3`文件夹下，对项目进行二次开发。开发完成后，可以通过`s deploy`进行快速部署。
+
 </usedetail>
+
+## 注意事项
+
+<matters id="flushContent">
+</matters>
 
 
 <devgroup>
