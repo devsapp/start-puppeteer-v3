@@ -13,6 +13,9 @@ async function postInit(inputObj) {
     console.log(`\n    Welcome to the puppeteer-app application
      This application requires to open these services: 
          FC  : https://fc.console.aliyun.com/
+
+     Tips：
+         - FC3 Component: https://docs.serverless-devs.com/user-guide/aliyun/#fc3
      \n`)
 }
 

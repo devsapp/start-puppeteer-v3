@@ -1,7 +1,7 @@
 Edition: 3.0.0
 Type: Project
 Name: start-puppeteer-v3
-Version: 0.0.5
+Version: 0.0.6
 Provider:
   - 阿里云
 Description: 本案例将 Puppeteer ，这一使用者广泛的基于 nodejs 的截图 web 应用，快速创建并部署到阿里云函数计算 FC 。
