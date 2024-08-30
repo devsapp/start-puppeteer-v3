@@ -11,6 +11,7 @@ resources:
       region: ${vars.region}
       functionName: '{{ functionName }}'
       code: ./code
+      logConfig: auto
       handler: index.handler
       timeout: 120
       memorySize: 1536
