@@ -85,7 +85,7 @@ exports.handler = async function (event, context, callback) {
   let url = evt.queryParameters["url"];
 
   if (!url) {
-    url = "https://www.serverless-devs.com";
+    url = "https://www.aliyun.com/";
   }
 
   if (!url.startsWith("https://") && !url.startsWith("http://")) {

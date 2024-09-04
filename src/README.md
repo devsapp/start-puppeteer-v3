@@ -11,6 +11,8 @@
 
 <codeUrl>
 
+
+
 </codeUrl>
 <preview>
 
@@ -86,7 +88,7 @@ Puppeteer 是一个 Node 库，它提供了高级的 API 并通过 DevTools 协�
 
 ### 查看部署的案例
 
-部署完成之后，您可以看到系统返回给您的案例地址, 此时，打开url, 就可以得到 Serverless Devs 官网首页的截图
+部署完成之后，您可以看到系统返回给您的案例地址, 此时，打开url, 就可以得到阿里云官网首页的截图
 
 也可以通过 url 渲染其他页面，在浏览器添加query参数 如：
 ![](https://img.alicdn.com/imgextra/i4/O1CN01bp2vHZ1Ot2oIRscdI_!!6000000001762-0-tps-1112-84.jpg)
