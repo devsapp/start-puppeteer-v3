@@ -14,7 +14,9 @@ resources:
       logConfig: auto
       handler: index.handler
       timeout: 120
-      memorySize: 1536
+      cpu: 1
+      memorySize: 1024
+      diskSize: 512
       runtime: nodejs16
       layers:
         - acs:fc:${vars.region}:official:layers/Nodejs-Puppeteer17x/versions/3

@@ -1,24 +1,13 @@
 
 > 注：当前项目为 Serverless Devs 应用，由于应用中会存在需要初始化才可运行的变量（例如应用部署地区、函数名等等），所以**不推荐**直接 Clone 本仓库到本地进行部署或直接复制 s.yaml 使用，**强烈推荐**通过 `s init ${模版名称}` 的方法或应用中心进行初始化，详情可参考[部署 & 体验](#部署--体验) 。
 
-# start-puppeteer-dipper 帮助文档
+# start-puppeteer-cap 帮助文档
 
 <description>
 
 本案例将 Puppeteer ，这一使用者广泛的基于 nodejs 的截图 web 应用，快速创建并部署到阿里云函数计算 FC 。
 
 </description>
-
-<codeUrl>
-
-
-
-</codeUrl>
-<preview>
-
-
-
-</preview>
 
 
 ## 前期准备
@@ -32,6 +21,7 @@
 | 服务/业务 |  权限  | 相关文档 |
 | --- |  --- | --- |
 | 函数计算 |  AliyunFCFullAccess | [帮助文档](https://help.aliyun.com/product/2508973.html) [计费文档](https://help.aliyun.com/document_detail/2512928.html) |
+| 日志服务 |  AliyunFCServerlessDevsRolePolicy | [帮助文档](https://help.aliyun.com/zh/sls) [计费文档](https://help.aliyun.com/zh/sls/product-overview/billing) |
 
 </service>
 
@@ -51,11 +41,12 @@
 
 <appcenter>
    
-:fire: 通过 [Dipper 应用中心](https://devs.console.aliyun.com/applications/createtemplate=start-puppeteer-dipper) ，[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://devs.console.aliyun.com/applications/createtemplate=start-puppeteer-dipper) 该应用。
+- :fire: 通过 [云原生应用开发平台 CAP](https://devs.console.aliyun.com/applications/create?template=start-puppeteer-cap) ，[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://devs.console.aliyun.com/applications/create?template=start-puppeteer-cap) 该应用。
    
 </appcenter>
 <deploy>
-
+    
+   
 </deploy>
 
 ## 案例介绍
@@ -78,7 +69,7 @@ Puppeteer 是一个 Node 库，它提供了高级的 API 并通过 DevTools 协�
 
 - ...
 
-通过 Serverless 开发平台，您只需要几步，就可以体验  Puppeteer ，并享受 Serverless 架构带来的降本提效的技术红利。
+通过云原生应用开发平台，您只需要几步，就可以体验  Puppeteer ，并享受 Serverless 架构带来的降本提效的技术红利。
 
 </appdetail>
 
@@ -103,19 +94,3 @@ Puppeteer 是一个 Node 库，它提供了高级的 API 并通过 DevTools 协�
 
 <matters id="flushContent">
 </matters>
-
-
-<devgroup>
-
-
-## 开发者社区
-
-您如果有关于错误的反馈或者未来的期待，您可以在 [Serverless Devs repo Issues](https://github.com/serverless-devs/serverless-devs/issues) 中进行反馈和交流。如果您想要加入我们的讨论组或者了解 FC 组件的最新动态，您可以通过以下渠道进行：
-
-<p align="center">  
-
-| <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407298906_20211028074819117230.png" width="130px" > | <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407044136_20211028074404326599.png" width="130px" > | <img src="https://images.devsapp.cn/fc-faq/33947367.png" width="130px" > |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| <center>微信公众号：`serverless`</center>                                                                                         | <center>微信小助手：`xiaojiangwh`</center>                                                                                        | <center>钉钉交流群：`33947367`</center>                                                                                           |
-</p>
-</devgroup>
