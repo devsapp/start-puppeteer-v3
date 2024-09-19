@@ -5,7 +5,7 @@
 
 <description>
 
-本案例将 Puppeteer ，这一使用者广泛的基于 nodejs 的截图 web 应用，快速创建并部署到阿里云函数计算 FC 。
+本案例将 Puppeteer ，这一使用者广泛的基于 nodejs 的截图 web 应用，快速创建并部署到云原生应用开发平台 CAP。
 
 </description>
 
@@ -53,7 +53,7 @@
 
 <appdetail id="flushContent">
 
-本案例将 Puppeteer ，这一使用者广泛的、基于 nodejs 运行时的截图 web 应用，快速创建并部署到阿里云函数计算 FC 。
+本案例将 Puppeteer ，这一使用者广泛的、基于 nodejs 运行时的截图 web 应用，快速创建并部署到云原生应用开发平台 CAP 。
 
 Puppeteer 是一个 Node 库，它提供了高级的 API 并通过 DevTools 协议来控制 Chrome(或Chromium)。通俗来说就是一个 headless chrome 浏览器 (也可以配置成有 UI 的，默认是没有的), 可以完成很多自动化的事情， 比如：
 
